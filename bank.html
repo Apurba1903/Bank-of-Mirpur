@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,29 +8,54 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
-<body>  
+
+<body>
     <header>
         <h1 class="text-5xl text-center mt-6">Let's get some <span class="font-semibold text-pink-600">Money</span></h1>
     </header>
-    <section class="mt-12">
-        <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto text-white">
-            <div class="bg-green-400 rounded-xl p-8">
-                <h4 class="text-2xl">Deposit</h4>
-                <h2 class="text-5xl">$00</h2>
-            </div>
-            <div class="bg-orange-400 rounded-xl p-8">
-                <h4 class="text-2xl">Withdraw</h4>
-                <h2 class="text-5xl">$00</h2>
-            </div>
-            <div class="bg-violet-400 rounded-xl p-8">
-                <h4 class="text-2xl">Balance</h4>
-                <h2 class="text-5xl">$1000</h2>
-            </div>
-            
-        </div>
-    </section>
-    <main>
 
+    <main>
+        <section class="mt-12">
+            <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto text-white">
+                <div class="bg-green-400 rounded-xl p-8">
+                    <h4 class="text-2xl">Deposit</h4>
+                    <h2 class="text-5xl">$<span id="deposit-total">00</span></h2>
+                </div>
+                <div class="bg-orange-400 rounded-xl p-8">
+                    <h4 class="text-2xl">Withdraw</h4>
+                    <h2 class="text-5xl">$00</h2>
+                </div>
+                <div class="bg-violet-400 rounded-xl p-8">
+                    <h4 class="text-2xl">Balance</h4>
+                    <h2 class="text-5xl">$1000</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-12">
+            <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto text-white">
+                <div class="bg-rose-400 rounded-xl p-8">
+                    <h4 class="text-2xl mb-4">Please Deposit</h4>
+                    <input class="w-9/12 block mb-2 px-3 rounded-lg h-8 text-black" type="text" name=""
+                        id="deposit-field" placeholder="$ Amount you want to deposit">
+                    <button id="btn-deposit"
+                        class="bg-sky-700 hover:bg-red-700 px-8 py-2 font-medium text-white rounded-lg">Deposit</button>
+                </div>
+
+
+                <div class="bg-fuchsia-400 rounded-xl p-8">
+                    <h4 class="text-2xl mb-4">Please Withdraw</h4>
+                    <input class="w-9/12 block mb-2 px-3 rounded-lg h-8 text-black" type="text" name=""
+                        id="withdraw-field" placeholder="$ Amount you want to withdraw">
+                    <button id="btn-withdraw"
+                        class="bg-sky-700 hover:bg-red-700 px-8 py-2 font-medium text-white rounded-lg">Withdraw</button>
+                </div>
+            </div>
+        </section>
     </main>
+
+
+    <script src="/JS/deposit.js"></script>
 </body>
+
 </html>
